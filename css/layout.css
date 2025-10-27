@@ -1,0 +1,148 @@
+/* Body styling with animated background */
+body {
+    margin: auto;
+    padding: 50px;
+    color: #000;
+    font-family: 'Lato', sans-serif;
+    
+    /* Dark gradient background for gaming aesthetic */
+   background: linear-gradient(112deg,#5b59eb,#2a2ae3,#f5f5f5);
+    background-size: 180% 180%;
+    animation: gradient-animation 6s ease infinite;
+}
+
+/* Background animation */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+  /* Grid layout setup */
+  .wrapper {
+    display: grid;
+    /* Three columns: logo, title, header */
+    grid-template-columns: 100px 1fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "logo top-title header"
+      "main main main"
+      "footer footer footer";
+    grid-gap: 0px;
+  
+    padding: 0;
+    margin-bottom: 0;
+  }
+  
+  /* Grid area assignments */
+  .logo {
+    grid-area: logo;
+    padding: 0;
+    padding-left: 20px;
+    float: left;
+    margin-bottom: 0;
+  }
+  
+  .top-title {
+    grid-area: top-title;
+    padding: 0;
+    margin-bottom: 0;
+    /* Cyan color for gaming theme */
+    color: #00d9ff;
+    font-size: 1.2em;
+  }
+  
+  .header {
+    grid-area: header;
+    display: grid;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  
+  /* Main content styling */
+  .main {
+    grid-area: main;
+    /* Semi-transparent dark background */
+    background-color: rgba(20, 20, 35, 0.9);
+    /* Cyan border with glow effect */
+    border: solid 2px #00d9ff;
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+  }
+  
+  .footer {
+    grid-area: footer;
+    text-align: right;
+  }
+  
+  /* General box padding */
+  .box {
+    padding: 20px;
+  }
+
+  /* Heading styles */
+  h1, h2, h3, h4 {
+    font-family: 'Ubuntu', sans-serif;
+    color: #00d9ff;
+  }
+  
+  /* Make images responsive */
+  .responsive {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Flex layout for content */
+  .info-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* List styling for content */
+  ul.text {
+      list-style: disc;
+      display: list-item;
+      border: none;
+      margin-left: 20px;
+  }
+
+  .single-spacing {
+    padding: 0;
+  }
+  
+  /* Navigation link colors */
+  .nav a {font-weight: bold;}
+.nav a:link, .nav a:visited {color: #00d9ff;}
+.nav a:hover {color: #00ffcc; text-decoration: none;}
+
+  /* Regular link colors */
+  a {font-weight: bold;}
+a:link{color: #00d9ff;}
+a:visited{color: #4da6ff;}
+a:hover{color: #00ffcc;}
+
+  
+  /* Mobile layout (tablets and phones) */
+  @media(max-width: 767px)
+  {
+    .wrapper {
+        display: grid;
+        /* Two columns for mobile */
+        grid-template-columns: 100px 1fr;
+        grid-template-rows: auto;
+        /* Reorganized layout */
+        grid-template-areas:
+             "logo top-title "
+             "header header"
+             "main main"
+             "footer footer";
+             grid-gap: 0;    
+    }
+  }

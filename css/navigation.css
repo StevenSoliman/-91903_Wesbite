@@ -1,0 +1,132 @@
+/* Base navigation styles */
+ul,
+.dropdown {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+ul li {
+  width: 100%;
+  position: relative;
+}
+
+li a {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+/* Dropdown menu styling */
+.dropdown {
+  display: none;
+  position: absolute;
+  /* Semi-transparent background */
+  background-color: rgba(2255, 0, 242, 0.9); 
+  border-radius: 12px;
+  padding: 10px 0;
+  text-align: center;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+/* Show dropdown */
+.display {
+  display: block;
+}
+
+.dropdown li {
+  list-style: none;
+  padding: 8px 12px;
+}
+
+/* Dropdown link styling */
+.dropdown a {
+  display: block;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Hover effect */
+.dropdown a:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+}
+
+/* Show dropdown on hover */
+ul li:hover .dropdown {
+  visibility: visible;
+}
+
+.menu-header {
+  display: block;
+}
+
+/* Hide hamburger on desktop */
+.fa-bars {
+  display: none;
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  
+  /* Vertical menu layout */
+  ul {
+      display: table;
+      width: 100%;
+  }
+
+  ul li {
+      text-align: left;
+  }
+
+  /* Dropdown positioning for mobile */
+  .dropdown {
+      position: relative;
+      padding-left: 20px;
+      width: auto;
+      left: 0;
+      top: 0;
+      transition: none;
+      visibility: visible;
+      display: none;
+      z-index: 1;
+  }
+
+  .dropdown.display {
+      display: block;
+  }
+
+  /* Hide menu by default on mobile */
+  .menu-content {
+      display: none;
+  }
+
+  /* Show menu when toggled */
+  .menu-content.show-menu {
+      display: block;
+  }
+
+  .menu-header {
+      text-align: right;
+      padding: 10px;
+      display: block;
+  }
+
+  /* Hamburger icon styling */
+  .fa-bars {
+      color: orange;
+      display: inline;
+      border: 1px solid rgb(126, 126, 126);
+      padding: 5px 10px;
+      border-radius: 3px;
+      /* Position in top-right */
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      cursor: pointer;
+      font-size: 24px;
+  }
+}

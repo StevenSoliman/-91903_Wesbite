@@ -1,0 +1,55 @@
+/* Gallery container */
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+/* Hover effect */
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+/* Gallery images */
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+/* Description text */
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+/* Include padding/border in element size */
+* {
+  box-sizing: border-box;
+}
+
+/* Desktop: 4 images per row */
+.responsive-gallery {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+/* Tablet: 2 images per row */
+@media only screen and (max-width: 700px) {
+  .responsive-gallery {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+/* Mobile: 1 image per row */
+@media only screen and (max-width: 500px) {
+  .responsive-gallery {
+    width: 100%;
+  }
+}
+
+/* Clear floats */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
